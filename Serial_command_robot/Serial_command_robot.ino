@@ -1,16 +1,6 @@
 /*
   Các tính năng cần có:
   - Nhận Command từ Serial
-    + Frame: <Type board>, <ID number board>, <Mode GET/SET data>, <ID Component>, <Len bufferdata>, <Buffer1>, ..., <Buffer n>,
-
-    + Board config: <Type board>,   <Command>,                  <Vallue1>,                        <Vallue2>,        <Vallue3>,        <Vallue4>,
-                      RADA_B,         SET_ID,          (From 1 to 254, 255 is broadcast),
-                      RADA_B,         GET_ID,
-
-    + Board control: <RADA+ID>,     <Command>,                   <Vallue>,
-                      RADA+255,       SET_SERVO_L,                 (From 0 to 180)                  //đang truyền dạng boardcast,
-                      RADA+255,       GET_SERVO_L,                                                  //đang truyền dạng boardcast,
-
                       Serial_Device                                                                                          MCU
                                           READ_INFO,\r\n
                                     )----------------------------->-------------------------------------------------------->
