@@ -11,6 +11,7 @@
 
 extern Vietduino_Serial mySerial;
 DEFINE_FUNCTION(Check_Serial,2);
+extern void Send_info_OverBluetooth();
 
 #endif
 #endif

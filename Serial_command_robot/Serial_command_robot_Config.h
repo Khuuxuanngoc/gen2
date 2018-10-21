@@ -11,9 +11,12 @@
 enum{
     _RADA_MODE_MANUAL_,
     _RADA_MODE_AVOID_,
-    _RADA_MODE_FOLLOW_
+    _RADA_MODE_FOLLOW_,
+    _RADA_MODE_LOWVOLT_
 }RadaBot_MODE;
 
 extern unsigned char uc_mode;
+extern unsigned char uc_lastMode;
+extern void setModeRobot(unsigned char _mode_Set_);
 
 #endif

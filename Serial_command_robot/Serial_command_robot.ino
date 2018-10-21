@@ -34,7 +34,6 @@ void setup() {
   Serial.println("Start!");
   Servo_L.begin(O_SERVO_PIN_L);
   Servo_R.begin(O_SERVO_PIN_R);
-
 }
 
 void loop() {

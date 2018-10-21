@@ -7,7 +7,7 @@
 #include "Serial_command_robot_debug.h"
 
 #define ML_BAT_MAX_VALUE                (3)
-#define ML_BAT_MIN_VALUE                (1)
+#define ML_BAT_MIN_VALUE                (0)
 #define ML_BAT_READ_VALUE_WARN_MIN      (6500)      // mV
 #define ML_BAT_READ_VALUE_WARN_MAX      (8500)      // mV
 

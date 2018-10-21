@@ -32,7 +32,7 @@ CREATE_FUNCTION(Check_Serial,2) {
 
               }else if(kk.indexOf(COMMAND_INFO) > -1){
                 mySerial.println(String(COMMAND_INFO) + "," + \
-                                  String(g_f_Vin_value) + "," +\
+                                  String((unsigned char)g_f_Vin_value) + "," +\
                                   String(uc_Servo_Pos_L) + "," + \
                                   String(uc_Servo_Pos_R) + "," + \
                                   String(uc_rada_dcSpeed_value));
@@ -54,6 +54,16 @@ CREATE_FUNCTION(Check_Serial,2) {
             case _RADA_MODE_FOLLOW_:
 
             break;
+
+            case _RADA_MODE_LOWVOLT_:
+              if(kk.indexOf(COMMAND_INFO) > -1){
+                mySerial.println(String(COMMAND_INFO) + "," + \
+                                  String((unsigned char)g_f_Vin_value) + "," +\
+                                  String(uc_Servo_Pos_L) + "," + \
+                                  String(uc_Servo_Pos_R) + "," + \
+                                  String(uc_rada_dcSpeed_value));
+              }else;
+            break;
           }
           
         }
@@ -62,6 +72,14 @@ CREATE_FUNCTION(Check_Serial,2) {
   }
 
   END_CREATE_FUNCTION
+}
+
+void Send_info_OverBluetooth(){
+  mySerial.println(String(COMMAND_INFO) + "," + \
+                                  String((unsigned char)g_f_Vin_value) + "," +\
+                                  String(uc_Servo_Pos_L) + "," + \
+                                  String(uc_Servo_Pos_R) + "," + \
+                                  String(uc_rada_dcSpeed_value));
 }
 
 #endif

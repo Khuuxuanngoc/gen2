@@ -3,7 +3,7 @@
 
 #define Db_volt(x)          Serial.print(x)
 #define Db_voltn(x)         Serial.println(x)
-
+#define M_DISABLE_DEBUG
 
 #if defined(M_DISABLE_DEBUG)
     #define Db_volt(x)      
