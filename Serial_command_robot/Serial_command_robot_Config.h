@@ -18,5 +18,6 @@ enum{
 extern unsigned char uc_mode;
 extern unsigned char uc_lastMode;
 extern void setModeRobot(unsigned char _mode_Set_);
+extern unsigned char getModeRobot();
 
 #endif

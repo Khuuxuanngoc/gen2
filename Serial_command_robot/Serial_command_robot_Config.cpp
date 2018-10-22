@@ -10,3 +10,6 @@ void setModeRobot(unsigned char _mode_Set_){
     uc_lastMode = uc_mode;
     uc_mode = _mode_Set_;
 }
+unsigned char getModeRobot(){
+    return uc_mode;
+}

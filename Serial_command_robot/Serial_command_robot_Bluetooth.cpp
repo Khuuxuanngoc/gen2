@@ -61,7 +61,7 @@ CREATE_FUNCTION(Check_Serial,2) {
                                   String((unsigned char)g_f_Vin_value) + "," +\
                                   String(uc_Servo_Pos_L) + "," + \
                                   String(uc_Servo_Pos_R) + "," + \
-                                  String(uc_rada_dcSpeed_value));
+                                  String(uc_rada_dcSpeed_value) + ",");
               }else;
             break;
           }
@@ -79,7 +79,7 @@ void Send_info_OverBluetooth(){
                                   String((unsigned char)g_f_Vin_value) + "," +\
                                   String(uc_Servo_Pos_L) + "," + \
                                   String(uc_Servo_Pos_R) + "," + \
-                                  String(uc_rada_dcSpeed_value));
+                                  String(uc_rada_dcSpeed_value)+ ",");
 }
 
 #endif
